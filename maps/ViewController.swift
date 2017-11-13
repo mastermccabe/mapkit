@@ -163,7 +163,7 @@ class ViewController: UIViewController {
         
         let waypointsString = waypoints.joined(separator: "|").addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         
-        let path = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(origin)&waypoints=\(waypointsString)&key=\(api_key)"
+        let path = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(origin)&waypoints=\(waypointsString)&key=\(Config.api_key)"
         
         Alamofire.request(path).validate().responseJSON { response in
             

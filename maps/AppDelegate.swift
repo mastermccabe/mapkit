@@ -11,8 +11,6 @@ import CoreData
 import GooglePlaces
 import GoogleMaps
 
-let api_key = ""
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
