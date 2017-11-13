@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		0496C12E1FB65E2B0027DBFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496C12D1FB65E2B0027DBFB /* AppDelegate.swift */; };
 		0496C1301FB65E2B0027DBFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496C12F1FB65E2B0027DBFB /* ViewController.swift */; };
-		0496C1331FB65E2B0027DBFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0496C1311FB65E2B0027DBFB /* Main.storyboard */; };
 		0496C1361FB65E2B0027DBFB /* maps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0496C1341FB65E2B0027DBFB /* maps.xcdatamodeld */; };
 		0496C1381FB65E2B0027DBFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0496C1371FB65E2B0027DBFB /* Assets.xcassets */; };
 		0496C13B1FB65E2B0027DBFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0496C1391FB65E2B0027DBFB /* LaunchScreen.storyboard */; };
+		EEC0FB2DBB35D10C12968A24 /* Pods_maps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D97807EF9CE08B4FCCF3BD /* Pods_maps.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0496C12A1FB65E2B0027DBFB /* maps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0496C12D1FB65E2B0027DBFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0496C12F1FB65E2B0027DBFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0496C1321FB65E2B0027DBFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0496C1351FB65E2B0027DBFB /* maps.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = maps.xcdatamodel; sourceTree = "<group>"; };
 		0496C1371FB65E2B0027DBFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0496C13A1FB65E2B0027DBFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0496C13C1FB65E2B0027DBFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32425BAE31B98F1ED2A743B5 /* Pods-maps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-maps.release.xcconfig"; path = "Pods/Target Support Files/Pods-maps/Pods-maps.release.xcconfig"; sourceTree = "<group>"; };
+		71D97807EF9CE08B4FCCF3BD /* Pods_maps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_maps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC2553F5CA8C058E272936F2 /* Pods-maps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-maps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-maps/Pods-maps.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEC0FB2DBB35D10C12968A24 /* Pods_maps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,8 @@
 			children = (
 				0496C12C1FB65E2B0027DBFB /* maps */,
 				0496C12B1FB65E2B0027DBFB /* Products */,
+				9734B8F18A4D50BBBDCCB640 /* Pods */,
+				87FD06D2CDE5650A78EB4738 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +63,29 @@
 			children = (
 				0496C12D1FB65E2B0027DBFB /* AppDelegate.swift */,
 				0496C12F1FB65E2B0027DBFB /* ViewController.swift */,
-				0496C1311FB65E2B0027DBFB /* Main.storyboard */,
 				0496C1371FB65E2B0027DBFB /* Assets.xcassets */,
 				0496C1391FB65E2B0027DBFB /* LaunchScreen.storyboard */,
 				0496C13C1FB65E2B0027DBFB /* Info.plist */,
 				0496C1341FB65E2B0027DBFB /* maps.xcdatamodeld */,
 			);
 			path = maps;
+			sourceTree = "<group>";
+		};
+		87FD06D2CDE5650A78EB4738 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71D97807EF9CE08B4FCCF3BD /* Pods_maps.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9734B8F18A4D50BBBDCCB640 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC2553F5CA8C058E272936F2 /* Pods-maps.debug.xcconfig */,
+				32425BAE31B98F1ED2A743B5 /* Pods-maps.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0496C13F1FB65E2B0027DBFB /* Build configuration list for PBXNativeTarget "maps" */;
 			buildPhases = (
+				50A3ACC6D70343A0D8F2E150 /* [CP] Check Pods Manifest.lock */,
 				0496C1261FB65E2B0027DBFB /* Sources */,
 				0496C1271FB65E2B0027DBFB /* Frameworks */,
 				0496C1281FB65E2B0027DBFB /* Resources */,
+				AC2A8977D89A681AC5EDC01D /* [CP] Embed Pods Frameworks */,
+				1816C4B94A1FC983728F99CE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,11 +152,73 @@
 			files = (
 				0496C13B1FB65E2B0027DBFB /* LaunchScreen.storyboard in Resources */,
 				0496C1381FB65E2B0027DBFB /* Assets.xcassets in Resources */,
-				0496C1331FB65E2B0027DBFB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1816C4B94A1FC983728F99CE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-maps/Pods-maps-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-maps/Pods-maps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50A3ACC6D70343A0D8F2E150 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-maps-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC2A8977D89A681AC5EDC01D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-maps/Pods-maps-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-maps/Pods-maps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0496C1261FB65E2B0027DBFB /* Sources */ = {
@@ -148,14 +234,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0496C1311FB65E2B0027DBFB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0496C1321FB65E2B0027DBFB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0496C1391FB65E2B0027DBFB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -276,11 +354,13 @@
 		};
 		0496C1401FB65E2B0027DBFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC2553F5CA8C058E272936F2 /* Pods-maps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DWXMRMVR88;
 				INFOPLIST_FILE = maps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wambl.maps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -291,11 +371,13 @@
 		};
 		0496C1411FB65E2B0027DBFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32425BAE31B98F1ED2A743B5 /* Pods-maps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DWXMRMVR88;
 				INFOPLIST_FILE = maps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wambl.maps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
