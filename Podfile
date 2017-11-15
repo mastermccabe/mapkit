@@ -9,8 +9,11 @@ target 'maps' do
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
   pod 'GoogleMaps'
-  pod 'SnapKit', '~> 4.0.0'
+
   pod 'SwiftyJSON'
   pod 'Alamofire', '~> 4.5'
+  
+  
+    pod 'SnapKit', '~> 4.0.0'
 
 end

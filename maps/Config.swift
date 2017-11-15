@@ -10,6 +10,6 @@ import Foundation
 
 class Config {
     
-    static let api_key = "AIzaSyB0a52YPcP-nSf-qnNu0htuDz0_cMejLe0"
+    static let api_key = ""
     
 }

@@ -8,10 +8,14 @@
 
 import UIKit
 import GooglePlacePicker
-import SnapKit
+
 import CoreLocation
 import Alamofire
 import SwiftyJSON
+
+
+import SnapKit
+
 
 class ViewController: UIViewController {
     
@@ -38,6 +42,8 @@ class ViewController: UIViewController {
     var loading: Bool = false {
         
         didSet {
+            
+            optimizeButton.isEnabled = loading
             
             if loading {
                 loader.startAnimating()
@@ -75,7 +81,7 @@ class ViewController: UIViewController {
     }()
     @objc func optimizeTapped(){
         
-        guard optimizeButton.titleLabel?.text == "START ROUTE" else {
+        if optimizeButton.titleLabel?.text == "START ROUTE" {
             
             openMaps()
             return
@@ -98,6 +104,18 @@ class ViewController: UIViewController {
         placePicker.delegate = self
         
         present(placePicker, animated: true, completion: nil)
+        
+    }
+    
+    lazy var resetButton: UIBarButtonItem = {
+        let a = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.refresh, target: self, action: #selector(resetTapped))
+        return a
+    }()
+    @objc func resetTapped(){
+        
+        places.removeAll(keepingCapacity: true)
+        table.reloadData()
+        optimizeButton.setTitle("OPTIMIZE ROUTE", for: .normal)
         
     }
     
@@ -124,6 +142,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = "Add Location"
+        navigationItem.setLeftBarButton(resetButton, animated: false)
         navigationItem.setRightBarButton(addButton, animated: false)
         
         view.addSubview(optimizeButton)
@@ -165,12 +184,18 @@ class ViewController: UIViewController {
         
         let path = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(origin)&waypoints=\(waypointsString)&key=\(Config.api_key)"
         
+        print(path)
+        
         Alamofire.request(path).validate().responseJSON { response in
+            
+            self.loading = false
             
             switch response.result {
             case .success:
                 
                 let _json = JSON(response.result.value!)
+                
+                print(_json)
                 
                 if let a = _json["geocoded_waypoints"].array {
 
@@ -201,8 +226,6 @@ class ViewController: UIViewController {
                 
             }
             
-            self.loading = false
-            
         }
         
     }
@@ -218,7 +241,7 @@ class ViewController: UIViewController {
         }
         
         open_urls.insert("\(_location.coordinate.latitude),\(_location.coordinate.longitude)", at: 0)
-        open_urls.append("\(_location.coordinate.latitude),\(_location.coordinate.longitude)")
+//        open_urls.append("\(_location.coordinate.latitude),\(_location.coordinate.longitude)")
         
         UIApplication.shared.openURL(URL(string:"comgooglemapsurl://www.google.com/maps/dir/" + open_urls.joined(separator: "/"))!)
 
@@ -235,6 +258,7 @@ extension ViewController: GMSPlacePickerViewControllerDelegate {
         let ip = IndexPath(row: places.count, section: 0)
         places.append(place)
         table.insertRows(at: [ip], with: .automatic)
+        optimizeButton.setTitle("OPTIMIZE ROUTE", for: .normal)
         table.endUpdates()
         
         viewController.dismiss(animated: true, completion: nil)
@@ -272,6 +296,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.beginUpdates()
             places.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            optimizeButton.setTitle("OPTIMIZE ROUTE", for: .normal)
             tableView.endUpdates()
             
         }
